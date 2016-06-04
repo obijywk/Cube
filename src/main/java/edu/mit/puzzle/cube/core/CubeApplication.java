@@ -18,6 +18,7 @@ import edu.mit.puzzle.cube.core.serverresources.SubmissionsResource;
 import edu.mit.puzzle.cube.core.serverresources.TeamResource;
 import edu.mit.puzzle.cube.core.serverresources.TeamsResource;
 import edu.mit.puzzle.cube.core.serverresources.VisibilitiesResource;
+import edu.mit.puzzle.cube.core.serverresources.VisibilityChangesResource;
 import edu.mit.puzzle.cube.core.serverresources.VisibilityResource;
 import edu.mit.puzzle.cube.huntimpl.linearexample.LinearExampleHuntDefinition;
 
@@ -95,6 +96,7 @@ public class CubeApplication extends Application {
         router.attach("/submissions/{id}", SubmissionResource.class);
         router.attach("/visibilities", VisibilitiesResource.class);
         router.attach("/visibilities/{teamId}/{puzzleId}", VisibilityResource.class);
+        router.attach("/visibilitychanges", VisibilityChangesResource.class);
         router.attach("/events", EventsResource.class);
         router.attach("/teams", TeamsResource.class);
         router.attach("/teams/{id}", TeamResource.class);
